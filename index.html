@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shoe-store</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link type="text/css" rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="loading-screen">
+    <div class="flex items-center justify-center min-h-screen bg-black">
+      <div class="animate-spin rounded-full h-32 w-32 border-4 border-t-transparent border-red-500"></div>
+    </div>
+  </div>
+    <div class="canvas-container"></div>
+    <div class="page parent">
+      <div class="section div1 bg-red-600 p-8 md:p-12 lg:p-16">
+        <div class="flex justify-between md:flex-row lg:flex-row flex-col">
+          <div class="ml-4 md:ml-8 lg:ml-12">
+            <img src="./logo.png" alt="Logo" width="100" height="100" class="md:w-1/4 lg:w-1/4">
+          </div>
+          <div class="flex space-x-4 md:space-x-8 lg:space-x-12 mt-4 md:mt-0 lg:mt-0">
+            <span class="text-white"><button class="md:px-4 lg:px-6">MEN</button> </span>
+            <span class="text-white"><button class="md:px-4 lg:px-6">WOMEN</button></span>
+            <span class="text-white"><button class="md:px-4 lg:px-6">KIDS</button> </span>
+            <span class="text-white"><button class="md:px-4 lg:px-6">COLLECTIONS</button></span>
+          </div>
+          <div class="mr-4 md:mr-8 lg:mr-12">
+            <div class="flex items-center">
+              <button class="text-white p-4 md:p-6 lg:p-8">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+              <button class="text-white p-4 md:p-6 lg:p-8">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="flex flex-col justify-between max-w-4xl mx-auto md:max-w-5xl lg:max-w-6xl">
+          <div class="text-primary-foreground p-4 md:p-6 lg:p-8">
+            <div class="flex flex-start justify-start items-start">
+              <div class="flex-1 ">
+                <h1 class="text-white text-4xl font-bold md:text-5xl lg:text-6xl">ACTION</h1>
+                <h1 class="text-white text-4xl font-bold md:text-5xl lg:text-6xl">808</h1>
+                <p class="text-white mt-2 md:mt-4 lg:mt-6">SUPER CHARGE</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center bg-secondary text-secondary-foreground p-4 md:p-6 lg:p-8">
+            <div class="flex center justify-center items-center">
+              <div class="flex-1">
+                <div class="mb-4 md:mb-6 lg:mb-8"></div>
+              </div>
+            </div>
+          </div>
+          <div class="text-accent-foreground self-end">
+            <div class="flex flex-end justify-center items-center">
+              <div class="flex-1">
+                <h2 class="text-white text-6xl font-bold md:text-7xl lg:text-8xl">GO</h2>
+                <h2 class="text-white text-6xl font-bold md:text-7xl lg:text-8xl">FOR</h2>
+                <h2 class="text-white text-6xl font-bold md:text-7xl lg:text-8xl">IT</h2>
+                <p class="text-white mt-2 md:mt-4 lg:mt-6">POWER SPEED</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between md:justify-center lg:justify-end mb-4">
+          <div class="flex space-x-4 p-2 ml-1 md:ml-4 lg:ml-6">
+            <button class="rounded-lg w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+              <img aria-hidden="true" alt="facebook" width="100%" src="./facebook.png" />
+            </button>
+            <button class="rounded-lg w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+              <img aria-hidden="true" alt="twitter" width="100%" src="./twitter.png" />
+            </button>
+            <button class="rounded-lg w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+              <img aria-hidden="true" alt="instagram" width="100%" src="./instagram.png" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <section class="section div2 py-24 md:py-24 bg-gray-500">
+        <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-8 relative">
+            <div class="">
+                <div class="grid overflow-hidden text-white md:grid-cols-2  rounded-xl">
+                  <aside class="relative hidden md:block">
+                    <div class="absolute inset-0 object-cover object-left-top w-full h-full mt-16 -mr-16 rounded-tl-lg">
+                      </div>
+                </aside>  
+                  <aside class="p-8 space-y-4 md:p-16 bg-black bg-opacity-1">
+                    <div class="flex flex-col text-white md:flex-row h-full ">
+                      <div class="">
+                        <h2 class="text-lg text-primary">Product Details</h2>
+                        <h3 class="text-5xl font-bold md:text-2xl lg:text-xl  text-primary-foreground">KNOW ABOUT</h3>
+                        <h3 class="text-5xl font-bold md:text-2xl lg:text-xl text-primary-foreground">OUR MAIN PRODUCT</h3>
+                        <p class="mt-2 text-muted-foreground">Nike is a leading manufacturer of sports-related products, including shoes,
+                          apparel, and equipment.</p>
+                        <div class=" flex flex-col md:flex-row lg:flex-row">
+                          <div class=" flex flex-col">
+                            <img aria-hidden="true" alt="Nike Shoe" src="https://placehold.co/300x200?text=Nike+Shoe"
+                              class="rounded-lg p-2 w-16 h-full" />
+                          </div>
+                          <div class=" flex flex-col">
+                            <h4 class="text-lg font-semibold mt-2 text-secondary">Best Quality Shoes</h4>
+                            <p class="text-muted-foreground">Featuring the latest technologies, to up your performance.</p>
+                          </div>
+                        </div>
+                    
+                        <div class=" flex flex-col md:flex-row lg:flex-row">
+                          <div class="flex flex-col mt-2"> 
+                            <img aria-hidden="true" alt="Nike Shoe" src="https://placehold.co/300x200?text=Nike+Shoe"
+                              class="rounded-lg p-2 w-16 h-full" />
+                          </div>
+                          <div class="flex flex-col">
+                            <h4 class="text-lg font-semibold mt-2 text-secondary">Best Giving Pricing</h4>
+                            <p class="text-muted-foreground">Offers the most affordable shoes with long-lasting quality.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </aside>
+    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section div3 p-6 bg-white">
+      <div class="mx-auto">
+          <div class="relative z-20 rounded-lg overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
+              <div class="pt-10 pb-12 px-6 sm:pt-16 sm:px-8 lg:py-16 lg:pr-0">
+                  <div class="lg:self-center">
+                    <div class="h-full p-24 flex flex-col justify-center items-center text-black">
+                      <div class="">
+                        <div>
+                          <h2 class="text-4xl font-bold text-primary">About us</h2>
+                          <h3 class="text-2xl font-semibold text-accent">WE PROVIDE <span class="text-primary">HIGH</span> QUALITY FOOTWEAR.
+                          </h3>
+                          <p class="text-muted-foreground text-xs text-left">
+                            Driven by the desire to create a product that gives your feet an incredible experience, and to provide that
+                            sensation for every step in your life. Every Step is a Comfort.
+                          </p>
+                          <div class="bg-card rounded-lg">
+                            <p class="text-lg font-semibold">Get up to 20% OFF!</p>
+                          </div>
+                          <button class="bg-black hover:bg-white px-4 py-2 text-secondary-foreground text-white hover:text-black rounded-lg">Explore
+                            more</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+              </div>
+              <div class="relative pb-3/5 -mt-6 md:pb-1/2">
+                <div class="absolute inset-0 w-full h-full transform translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-10 lg:translate-y-20"></div>  
+               </div>
+          </div>
+      </div>
+  </div>
+
+
+      <section class="section div4 p-10 md:py-20 px-0 md:p-10 md:px-0 bg-red-400 ">
+        <section class="relative px-10 md:p-0 transform duration-500 cursor-pointer hover:-translate-y-1 ">
+            <img class="xl:max-w-6xl w-screen" src="https://images.pexels.com/photos/1435532/pexels-photo-1435532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        </section>
+    </section>
+
+     
+
+      <div class="section div5 bg-gradient-to-b from-red-400 to-red-500 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row -mx-4">
+                <div class="md:flex-1 px-4">
+                    <div class="h-[460px] rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
+                      <div class="w-full h-full object-cover"></div>
+                        <!--<img class="w-full h-full object-cover" src="https://cdn.pixabay.com/photo/2020/05/22/17/53/mockup-5206355_960_720.jpg" alt="Product Image">-->
+                    </div>
+                    
+                </div>
+                <div class="md:flex-1 p-4 bg-gray-400 rounded-lg">
+                    <h2 class="text-2xl text-black font-bold text-black mb-2">Product Name</h2>
+                    <p class="text-white text-sm mb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed
+                        ante justo. Integer euismod libero id mauris malesuada tincidunt.
+                    </p>
+                    <div class="flex mb-4">
+                        <div class="mr-4">
+                            <span class="font-bold text-black">Price:</span>
+                            <span class="text-white">$29.99</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-black">Availability:</span>
+                            <span class="text-white">In Stock</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <span class="font-bold text-black">Select Color:</span>
+                        <div class="flex items-center mt-2">
+                            <button data-variant="street" class="variant-btn w-6 h-6 rounded-full bg-gray-800 dark:bg-gray-200 mr-2"></button>
+                            <button data-variant="beach" class="variant-btn w-6 h-6 rounded-full bg-red-400 dark:bg-red-700 mr-2"></button>
+                            <button data-variant="midnight" class="variant-btn w-6 h-6 rounded-full bg-blue-300 dark:bg-blue-700 mr-2"></button>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <span class="font-bold text-black">Select Size:</span>
+                        <div class="flex items-center mt-2">
+                            <button class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">S</button>
+                            <button class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">M</button>
+                            <button class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">L</button>
+                            <button class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">XL</button>
+                            <button class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">XXL</button>
+                        </div>
+                    </div>
+                    <div class="flex -mx-2 mb-4">
+                      <div class="w-1/2 px-2">
+                          <button class="w-full bg-black text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 dark:hover:bg-gray-700">Add to Cart</button>
+                      </div>
+                      <div class="w-1/2 px-2">
+                          <button class="w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white py-2 px-4 rounded-full font-bold hover:bg-gray-300 dark:hover:bg-gray-600">Buy Now</button>
+                      </div>
+                  </div>
+                    <div>
+                        <span class="font-bold text-black">Product Description:</span>
+                        <p class="text-white text-sm mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                            sed ante justo. Integer euismod libero id mauris malesuada tincidunt. Vivamus commodo nulla ut
+                            lorem rhoncus aliquet. Duis dapibus augue vel ipsum pretium, et venenatis sem blandit. Quisque
+                            ut erat vitae nisi ultrices placerat non eget velit. Integer ornare mi sed ipsum lacinia, non
+                            sagittis mauris blandit. Morbi fermentum libero vel nisl suscipit, nec tincidunt mi consectetur.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+                                   
+
+
+      <footer class="section div6 bg-gradient-to-b from-red-500 to-red-600">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <!--Grid-->
+            <div class="py-14 grid grid-cols-12 gap-x-5 gap-y-8">
+                <div class="col-span-full xl:col-span-3 relative bg-gradient-to-b from-red-500 to-red-600 rounded-2xl gap-12 p-6 xl:w-72 h-96 flex flex-col justify-center items-center">
+                    
+                    <img src="./logo.png" alt="Logo" width="100" height="100" class="md:w-1/4 lg:w-1/4">
+                   
+                    <div class="flex  space-x-4 sm:justify-center  ">
+                      <div class="flex justify-between md:justify-center lg:justify-end mb-4">
+                        <div class="flex space-x-4 section div2 p-2 ml-1 md:ml-4 lg:ml-6">
+                          <button class="rounded-lg w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+                            <img aria-hidden="true" alt="facebook" width="100%" src="./facebook.png" />
+                          </button>
+                          <button class="rounded-lg w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+                            <img aria-hidden="true" alt="twitter" width="100%" src="./twitter.png" />
+                          </button>
+                          <button class="rounded-lg w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+                            <img aria-hidden="true" alt="instagram" width="100%" src="./instagram.png" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="block text-center xl:text-left xl:py-16 col-span-full min-[500px]:col-span-6 md:col-span-4 xl:col-span-3 xl:pl-5">
+                    <h4 class="text-lg text-gray-900 font-bold mb-9">Get In Touch</h4>
+                    <ul class="text-gray-900 transition-all duration-500 grid">
+                        <li>support@help.com</li>
+                        <li>+91 123 456 7890</li>
+                        <li>61-A, Elm street, Bangalore, India.</li>
+                    </ul>
+                </div>
+                <div class="block xl:py-16 col-span-full min-[500px]:col-span-6 md:col-span-4 xl:col-span-3">
+                    <h4 class="text-lg text-gray-900 font-bold mb-9 text-center xl:text-left">Quick Links</h4>
+                    <div class="flex gap-6 xl:gap-12 max-xl:justify-center">
+                        <ul class="text-white transition-all duration-500 grid ">
+                            <li><a href="javascript:;">Home</a></li>
+                            <li><a href="javascript:;">FAQs</a></li>
+                            <li><a href="javascript:;">Price</a></li>
+                            <li><a href="javascript:;">Features</a></li>
+                        </ul>
+                        <ul class="text-white transition-all duration-500 grid ">
+                            <li><a href="javascript:;">Careers</a></li>
+                            <li><a href="javascript:;">About </a></li>
+                            <li><a href="javascript:;">Contact</a></li>
+                            <li><a href="javascript:;">Products</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block xl:py-16 col-span-full md:col-span-4 xl:col-span-3">
+                    <h4 class="text-lg text-gray-900 font-bold mb-9 text-center xl:text-left">Newsletter</h4>
+                    <div class="grid gap-7 ">
+                        <input type="text" name="email"
+                            class="py-2 px-4 border border-gray-300 shadow-sm h-14 text-lg text-gray-800 rounded-full w-full  xl:w-64 placeholder:text-gray-400 focus:outline-none"
+                            placeholder="Enter email.." />
+                        <button type="submit"
+                            class="flex gap-2 justify-center items-center py-3.5 px-7 rounded-full text-white bg-black shadow-md w-fit transition-all duration-500 mx-auto xl:mx-0 hover:bg-indigo-700">Subscribe<svg
+                                width="17" height="13" viewBox="0 0 17 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.5 6.88281L14.8333 6.88281M10.6667 11.8828L15.0774 7.47207C15.3552 7.19429 15.4941 7.0554 15.4941 6.88281C15.4941 6.71022 15.3552 6.57133 15.0774 6.29356L10.6667 1.88281"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="py-4 bg-indigo-50">
+            <div class="flex items-center justify-center">
+                <span class="text-sm text-gray-800 ">Copyright@2024 All Right Reserved</a></span>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+  
+    </div>
+
+
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+            "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+          }
+        }
+    </script>
+
+    <script type="module" src="First.js"></script>
+  </body>
+</html>

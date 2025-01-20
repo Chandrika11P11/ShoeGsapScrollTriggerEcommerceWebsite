@@ -1,2 +1,2 @@
 # ShoeGsapScrollTriggerEcommerceWebsite
- ![GIF Description](/)
+ ![GIF Description](/Untitled video - Made with Clipchamp.gif)
